@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const Signup = require('../models/signupModel');
 
 //accessing the login page
 router.get('/login', (req, res) => {
@@ -13,8 +12,10 @@ router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
         //this is the route for the page after successfully logging in
         successRedirect: '/index',
+
         //incase of failure remain on login
         failureRedirect: '/login'
+
         })
         //'next' allows the next process to be executed
         (req, res, next);
