@@ -55,3 +55,5 @@ const validatedForm = () =>{
 
     
 }
+
+module.exports = validatedForm

@@ -11,7 +11,7 @@ const Signup = require('../models/signupModel');
 
 //route for accessing/viewing the signup page
 router.get('/signup', (req, res) => {
-    res.render('signup')
+    res.status(200).render('signup');
 });
 
 //route for the post method
